@@ -132,7 +132,7 @@ const Login = () => {
                 />
               </div>
               <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-green-900 hover:bg-yellow-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="button"
                 onClick={handleSignUp}
               >
@@ -141,7 +141,7 @@ const Login = () => {
               <p className="text-gray-700 text-sm mt-4">
                 Already have an account?{' '}
                 <span
-                  className="text-blue-500 hover:text-blue-700 cursor-pointer"
+                  className="text-green-900 hover:text-yellow-400 cursor-pointer"
                   onClick={() => setIsLogin(true)}
                 >
                   Login
@@ -167,7 +167,7 @@ const Login = () => {
                 />
               </div>
               <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-green-900 hover:bg-yellow-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="button"
                 onClick={handleForgot}
               >
@@ -176,7 +176,7 @@ const Login = () => {
               <p className="text-gray-700 text-sm mt-4">
                 Go back to{' '}
                 <span
-                  className="text-blue-500 hover:text-blue-700 cursor-pointer"
+                  className="text-green-900 hover:text-yellow-400 cursor-pointer"
                   onClick={() => setIsForgot(false)}
                 >
                   Login
