@@ -4,7 +4,6 @@ import { Link, NavLink } from 'react-router-dom';
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // Close menu on ESC key press
     useEffect(() => {
         const handleKeyDown = (e) => {
             if (e.key === 'Escape') setMenuOpen(false);
@@ -13,7 +12,6 @@ export default function Header() {
         return () => document.removeEventListener('keydown', handleKeyDown);
     }, []);
 
-    // Close menu when clicking outside
     useEffect(() => {
         const handleClickOutside = (e) => {
             if (menuOpen && !e.target.closest('.mobile-menu') && !e.target.closest('button')) {
@@ -24,7 +22,6 @@ export default function Header() {
         return () => document.removeEventListener('click', handleClickOutside);
     }, [menuOpen]);
 
-    // Prevent body scroll when menu is open
     useEffect(() => {
         document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
     }, [menuOpen]);
@@ -47,12 +44,10 @@ export default function Header() {
                         </button>
                     </div>
 
-                    {/* Backdrop */}
                     {menuOpen && (
                         <div className="fixed inset-0 bg-black/50 z-40 transition-opacity duration-300" />
                     )}
 
-                    {/* Mobile Menu */}
                     <div 
                         className={`mobile-menu fixed inset-y-0 right-0 w-64 bg-white z-50 shadow-xl transform transition-transform duration-300 ${
                             menuOpen ? 'translate-x-0' : 'translate-x-full'
@@ -94,7 +89,6 @@ export default function Header() {
                         </div>
                     </div>
 
-                    {/* Desktop Menu */}
                     <div className="hidden lg:flex items-center gap-6">
                         <NavLink to="/Home" className="text-l font-bold text-gray-800 hover:text-yellow-400">Home</NavLink>
                         <NavLink to="/Contact" className="text-gray-800 text-l font-bold hover:text-yellow-400">Services</NavLink>
