@@ -8,10 +8,10 @@ export default function Header() {
         <header className="shadow sticky z-50 top-0 bg-white">
             <nav className="border-white px-4 lg:px-6 py-3">
                 <div className="flex justify-between items-center mx-auto max-w-screen-xl">
-                    <Link to="/" className="flex items-center">
+                    <NavLink to="/Home" className="flex items-center">
                         <h1 className="text-2xl text-gray-400 font-bold">ADVENTURE</h1>
                         <h3 className='text-yellow-400 text-2xl font-bold ml-1'>Park</h3>
-                    </Link>
+                    </NavLink>
 
                     <div className="lg:hidden">
                         <button onClick={() => setMenuOpen(!menuOpen)} className="text-gray-800 focus:outline-none text-2xl">
